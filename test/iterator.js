@@ -7,7 +7,7 @@ describe('Testing iterator callback', function() {
 
         var l = function(message) {
             count++;
-            return console.log(count, message);
+            console.log(count, message);
         };
 
         return {

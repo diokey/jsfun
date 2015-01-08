@@ -19,7 +19,7 @@ describe('Crazy sum functions', function() {
         assert.equal(add(2)(3),5);
    });
 
-   it('should accept any number of arguments', function() {
+   it('should accept any number of arguments (not quite)', function() {
         var add = function (a) {
             var sum = a;
 
@@ -38,7 +38,7 @@ describe('Crazy sum functions', function() {
         assert.equal(add(2)(3)(4)(),9);
 
         var four = add(4);
-
+        
         assert.equal(four(6)(),10);
 
         //assert.equal(four(5)(),9); this returns 15. Because we are memorizing previous values :( . We need a fix for that
@@ -66,6 +66,8 @@ describe('Crazy sum functions', function() {
         assert.equal(five(6),11);
         assert.equal(four(2)(1),7);
         assert.equal(add(5)(6)(7),18);
+
+        //ok param fixed, let's now fix the last value memorization issue
    });
 
    it('should fix the variable momerization problem', function() {
